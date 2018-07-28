@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1080"
+        app:scale_base_height="200">
+
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_width="100"
+            app:scale_height="100"
+            app:scale_left="50"
+            app:scale_top="50"
+            android:background="#ff2222"/>
+        <ImageView
+            android:id="@+id/profile2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_width="100"
+            app:scale_height="100"
+            app:scale_left="50"
+            app:scale_top="50"
+            android:background="#22aaff"/>
+        <TextView
+            android:id="@+id/myNickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_width="200"
+            app:scale_left="200"
+            app:scale_top="50"
+            app:scale_textsize="60"
+            android:text="김현재"/>
+        <TextView
+            android:id="@+id/myContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_width="200"
+            app:scale_height="100"
+            app:scale_textsize="70"
+            app:scale_left="900"
+            app:scale_top="50"
+            android:text="안녕"/>
+
+
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+
+</RelativeLayout>
