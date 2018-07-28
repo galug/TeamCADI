@@ -46,23 +46,33 @@ public class MainActivity extends AppCompatActivity // OnClick메서드 사용�
         try
         {
             LayoutInflater inflater = (LayoutInflater) MainActivity.this
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);//메인 액티비티를 참조해서 inflater를 뜨게함
 
             View layout = inflater.inflate(R.layout.popup, (ViewGroup) findViewById(R.id.popup_element));
 
             popupWindow = new PopupWindow(layout, mWidthPixel - 100, mHeightPixel - 500, true);
             popupWindow.showAtLocation(layout, Gravity.CENTER, 0, 0);
 
+            btnClosePopup=(Button)layout.findViewById(R.id.close_popup);
+            btnClosePopup.setOnClickListener(disListner);
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    private View.OnClickListener disListner=new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            popupWindow.dismiss();
+        }
+    };
     private View.OnClickListener popupListener=new View.OnClickListener() {
         @Override
         public void onClick(View v)
         {
             Toast.makeText(getApplicationContext(),"popupLIstener실행",Toast.LENGTH_SHORT).show();
+            initiatePopupWindow();
         }
     };
 
